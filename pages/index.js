@@ -12,10 +12,7 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <div className="">
-        <Navbar />
-        <Footer />
-      </div>
+      <div className=""></div>
     </>
   );
 }
