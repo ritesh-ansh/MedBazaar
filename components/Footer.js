@@ -3,13 +3,19 @@ import Image from "next/image";
 function Footer() {
   return (
     <div className="">
-      <div className="flex justify-center items-center">
-        <div className=" ">
-          {/* <Image src="/icons/phone.png" layout="fill" /> */}
-          <h1>hello</h1>
+      <div className=" flex ">
+        <div className="max-w-full ">
+          <Image
+            src="/icons/phone.png"
+            width={500}
+            height={500}
+            // layout="responsive"
+          />
         </div>
-        <div>
-          <h2>Download</h2>
+        <div className=" flex items-center ">
+          <div className="">
+            <h3 className=" text-3xl font-bold ">Download</h3>
+          </div>
         </div>
       </div>
     </div>
