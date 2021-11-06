@@ -8,6 +8,7 @@ module.exports = {
         sans: ["Roboto", "Mulish", "sans-serif"],
         roboto: ["Roboto", "sans-serf"],
         mulish: ["Mulish", "sans-serif"],
+        quicksand: ["Quicksand", "sans-serif"],
       },
     },
   },
