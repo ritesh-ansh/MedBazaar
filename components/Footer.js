@@ -16,37 +16,27 @@ function Footer() {
         <div className=" flex items-center ">
           <div className="">
             <h3 className=" p-4 text-5xl font-semibold tracking-wider leading-5 ">
-              <Link href="/">
-                <a>
-                  <span className=" text-[#077861] text-5xl font-bold ">
-                    Download{" "}
-                  </span>
-                </a>
-              </Link>
+              <span className="  text-[#077861] font-mulish  text-5xl font-bold ">
+                Download{" "}
+              </span>
               the app for{" "}
             </h3>
-            <h3 className=" p-4 pt-2 text-5xl font-semibold tracking-wider leading-5 ">
+            <h3 className=" p-4 pt-6 text-5xl font-semibold tracking-wider leading-5 ">
               free
             </h3>
             <div className="flex items-center">
               <Link href="/">
-                <a>
+                <a className="transition transform hover:scale-105 ">
                   <Image
-                    className="transition transform hover:scale-105 "
                     src="/icons/google-play.png"
-                    width={250}
+                    width={240}
                     height={100}
                   />
                 </a>
               </Link>
               <Link href="/">
-                <a>
-                  <Image
-                    className=" pt-0 transition transform hover:scale-105 "
-                    src="/icons/apple.png"
-                    width={250}
-                    height={230}
-                  />
+                <a className=" transition transform hover:scale-105 ">
+                  <Image src="/icons/apple.svg" width={210} height={140} />
                 </a>
               </Link>
             </div>
