@@ -8,8 +8,10 @@ export default function Home() {
       <Head>
         <title>MedBazar</title>
       </Head>
-      <Navbar />
-      <Footer />
+      <div className="">
+        <Navbar />
+        <Footer />
+      </div>
     </>
   );
 }
