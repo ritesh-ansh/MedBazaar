@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import Search from "./Search";
 
 function Navbar() {
   return (
-    <nav className="bg-blue-400 p-2">
+    <nav className="bg-blue-400 p-2 rounded-b-md">
       <div className="flex items-center">
         <Image
           src="/images/logo.png"
@@ -16,9 +17,11 @@ function Navbar() {
           </button>
         </div>
 
+        <Search/>
+
         <div className="items-center ml-auto flex">
         <Link href="/">
-                <a className="transition transform hover:scale-105">
+                <a className="transition transform hover:scale-105 mx-5">
                   <Image
                     src="/icons/cart.png"
                     width={25}
@@ -27,7 +30,7 @@ function Navbar() {
                 </a>
               </Link>
         <Link href="/">
-                <a className="transition transform hover:scale-105">
+                <a className="transition transform hover:scale-105 mx-5">
                   <Image
                     src="/icons/rx.png"
                     width={25}
@@ -36,8 +39,8 @@ function Navbar() {
                 </a>
         </Link>
 
-        <button className="box-border py-1 px-2 border-2 rounded-md font-mulish">Login</button>
-        <button className="box-border py-1 px-2 border-2 rounded-md font-quicksand">SignIn</button>
+        <button className="box-border py-0.5 px-1.5 border-2 rounded-md font-quicksand text-sm mr-5 ml-5">Login</button>
+        <button className="box-border py-0.5 px-1.5 border-2 rounded-md font-quicksand text-sm mr-5">SignIn</button>
   
         </div>
         
