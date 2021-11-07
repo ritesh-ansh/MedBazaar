@@ -1,4 +1,5 @@
 import Head from "next/head";
+import MainSearch from "../components/MainSearch";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <div className=""></div>
+      <MainSearch />
     </>
   );
 }
