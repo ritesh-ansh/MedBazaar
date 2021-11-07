@@ -47,7 +47,7 @@ function Footer() {
         <h3 className="p-3 text-xl font-semibold text-gray-700 font-mulish">
           Our Payment Partners
         </h3>
-        <div className="flex justify-around items-center p-4">
+        <div className="flex justify-around items-center p-4 ">
           <div>
             <Image src="/icons/gpay.png" width={60} height={30} />
           </div>
@@ -69,7 +69,7 @@ function Footer() {
           <div>
             <Image src="/icons/upi.png" width={90} height={50} />
           </div>
-          <div>
+          <div className="mx-5 ml-6">
             <p className="text-md pd-3 m-3 font-mulish font-semibold">
               Connect with us
             </p>
