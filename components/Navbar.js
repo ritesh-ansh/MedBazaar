@@ -16,9 +16,9 @@ function Navbar() {
           </button>
         </div>
 
-        <div>
+        <div className="items-center ml-auto flex">
         <Link href="/">
-                <a className="transition transform hover:scale-105 mx-20">
+                <a className="transition transform hover:scale-105">
                   <Image
                     src="/icons/cart.png"
                     width={25}
@@ -27,7 +27,7 @@ function Navbar() {
                 </a>
               </Link>
         <Link href="/">
-                <a className="transition transform hover:scale-105 mx-20">
+                <a className="transition transform hover:scale-105">
                   <Image
                     src="/icons/rx.png"
                     width={25}
@@ -36,7 +36,7 @@ function Navbar() {
                 </a>
         </Link>
 
-        <button className="box-border py-1 px-2 border-2 rounded-md font-quicksand">Login</button>
+        <button className="box-border py-1 px-2 border-2 rounded-md font-mulish">Login</button>
         <button className="box-border py-1 px-2 border-2 rounded-md font-quicksand">SignIn</button>
   
         </div>
