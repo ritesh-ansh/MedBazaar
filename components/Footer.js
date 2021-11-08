@@ -47,33 +47,35 @@ function Footer() {
         </div>
       </div>
       <div className=" bg- ">
-        <h3 className="p-3 text-xl font-semibold text-gray-700 font-mulish">
-          Our Payment Partners
-        </h3>
-        <div className="flex  justify-around p-4 ">
-          <div className="flex md:space-x-16 md:flex-row flex-col md:justify-around items-center p-4 ">
-            <div>
-              <Image src="/icons/gpay.png" width={60} height={30} />
+        <div className="flex flex-col justify-around p-4 ">
+          <h3 className="p-3 mx-auto text-xl font-semibold text-gray-700 font-mulish">
+            Our Payment Partners
+          </h3>
+          <div className="flex   flex-row justify-around md:justify-around items-center p-4 ">
+            <div className="flex md:flex-row md:space-x-24 flex-col items-start justify-start md:items-center md:justify-center p-4  pr-0 ">
+              <div>
+                <Image src="/icons/gpay.png" width={60} height={30} />
+              </div>
+              <div>
+                <Image src="/icons/paytm.png" width={60} height={55} />
+              </div>
+              <div>
+                <Image src="/icons/phone-pay.png" width={40} height={40} />
+              </div>
+              <div className="pt-2">
+                <Image src="/icons/mastercard.png" width={60} height={40} />
+              </div>
             </div>
-            <div>
-              <Image src="/icons/paytm.png" width={60} height={55} />
-            </div>
-            <div>
-              <Image src="/icons/phone-pay.png" width={40} height={40} />
-            </div>
-            <div className="pt-2">
-              <Image src="/icons/mastercard.png" width={60} height={40} />
-            </div>
-          </div>
-          <div className="flex md:flex-row md:space-x-16 flex-col items-start justify-start md:items-center md:justify-center p-4 ">
-            <div className="pt-2">
-              <Image src="/icons/visa.png" width={60} height={20} />
-            </div>
-            <div className="pt-2">
-              <Image src="/icons/rupay.png" width={70} height={50} />
-            </div>
-            <div>
-              <Image src="/icons/upi.png" width={90} height={50} />
+            <div className="flex md:flex-row md:space-x-24 flex-col items-start justify-start md:items-center md:justify-center pl-0 p-4 ">
+              <div className="pt-2">
+                <Image src="/icons/visa.png" width={60} height={20} />
+              </div>
+              <div className="pt-2">
+                <Image src="/icons/rupay.png" width={70} height={50} />
+              </div>
+              <div>
+                <Image src="/icons/upi.png" width={90} height={50} />
+              </div>
             </div>
           </div>
           <div className=" flex flex-col items-center justify-center mx-5 ml-6">
