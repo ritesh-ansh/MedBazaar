@@ -1,8 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import Search from "./Search";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    console.log("clicked");
+    setIsOpen((isOpen) => !isOpen);
+    console.log(isOpen);
+  };
+
   return (
     <>
       {/* TODO: MAKE SEARCH BAR FUNCTIONALITY i.e. WHEN BAR GOES IN THE ELEMENTS MOVE SIDE WAYS  */}
@@ -20,8 +29,11 @@ function Navbar() {
             </Link>
             <h4 className="px-10">Dropdown</h4>
           </div>
-          <Link href="/">
-            <a className=" p-2 border-black rounded border-2 md:hidden">
+          <Link href="">
+            <a
+              onClick={handleButtonClick}
+              className=" p-2 border-black rounded border-2 md:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -50,39 +62,63 @@ function Navbar() {
               </a>
             </Link>
             <Link href="/">
-              <a className=" border-2 hover:outline-none border-black px-2 py-1 rounded-md transform transition duration-75 hover:scale-105 ">
-                <button>Login</button>
+              <a className="  flex items-center justify-center border-2 hover:outline-none hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 border-black px-2 py-1 rounded-md transform transition duration-75 hover:scale-105 ">
+                <Image src="/icons/login.png" width={30} height={30} />
+                <button className="p-2">Login</button>
               </a>
             </Link>
             <Link href="/">
-              <a className=" border-2 hover:outline-none border-black px-2 py-1 rounded-md transform transition duration-75 hover:scale-105 ">
-                <button>Sign Up</button>
+              <a className="  flex items-center justify-center border-2 hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 hover:outline-none border-black px-2 py-1 rounded-md transform transition duration-75 hover:scale-105 ">
+                <Image src="/icons/signup.png" width={30} height={30} />
+                <button className="p-2">Sign Up</button>
               </a>
             </Link>
           </div>
         </nav>
-        {/* <ul className=" w-full md:hidden h-screen bg-[#fdd134] ">
+        {/* TODO: use useState to get he slide in and onnclick behaviour on the buttin and the ul */}
+        <ul
+          className={
+            " w-full space-y-3 px-6 py-2 fixed transition transform duration-150  left-0 right-0  md:hidden h-screen bg-[#fdd134] " +
+            (isOpen ? "translate-x-0" : "translate-x-full")
+          }
+        >
           <li>
             <Link href="/">
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
+              <a className="flex items-center">
+                <Image src="/icons/rx.png" width={40} height={40} />
+
+                <label className="px-3 text-white">Prescription</label>
               </a>
             </Link>
           </li>
-        </ul> */}
+          <li>
+            <Link href="/">
+              <a className="flex items-center">
+                <Image src="/icons/cart.png" width={40} height={40} />
+
+                <label className="px-3 text-white">Cart</label>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a className="flex items-center">
+                <Image src="/icons/login.png" width={40} height={40} />
+
+                <label className="px-3 text-white">Login</label>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a className="flex items-center">
+                <Image src="/icons/signup.png" width={40} height={40} />
+
+                <label className="px-3 text-white">Sign Up</label>
+              </a>
+            </Link>
+          </li>
+        </ul>
       </header>
     </>
   );
