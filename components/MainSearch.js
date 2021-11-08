@@ -1,19 +1,15 @@
 import Image from "next/image";
+import Navbar from "./Navbar";
 import Search from "./Search";
 
 function MainSearch() {
   return (
     <>
-      <div className="flex relative ">
-        <div className="h-[100vh]">
-          <img
-            className=" absolute h-[100vh] z-[-2] w-full object-cover"
-            src="/images/bg.jpg"
-          />
-        </div>
-        <div className="mt-[50vh] mx-auto">
-          <Search mainSearch="true" navBar="false" />
-        </div>
+      <div
+        className="w-full flex justify-center items-center h-screen bg-back-ground opacity-80  bg-no-repeat bg-cover  "
+        // styles="background-image:url('/images/bg.jpg')"
+      >
+        <Search />
       </div>
     </>
   );
