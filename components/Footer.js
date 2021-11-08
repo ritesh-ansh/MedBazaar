@@ -18,12 +18,12 @@ function Footer() {
         <div className=" flex items-center ">
           <div className="flex items-center flex-col  ">
             <div className="">
-              <h3 className="font-quicksand mr-auto p-2 md:p-4 text-4xl lg:text-5xl font-semibold tracking-wider  leading-11 md:leading-5 ">
-                <span className="  text-[#077861] lg:text-5xl text-4xl font-bold ">
+              <h3 className="font-quicksand  mr-auto text-center p-2 md:p-4 text-4xl lg:text-5xl font-semibold tracking-wider  leading-11 md:leading-5 ">
+                <span className="  text-[#077861]  lg:text-5xl text-4xl font-bold ">
                   Download{" "}
                 </span>
-                the app for{" "}
-                <span className="flex justify-center items-center pt-3 md:pt-6 text-4xl lg:text-5xl font-semibold tracking-wider leading-5 ">
+                the app for <span className="md:hidden "> free</span>
+                <span className="md:flex hidden justify-center items-center pt-3 md:pt-6 text-4xl lg:text-5xl font-semibold tracking-wider leading-5 ">
                   free
                 </span>
               </h3>
