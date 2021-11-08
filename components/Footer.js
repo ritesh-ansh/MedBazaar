@@ -5,11 +5,12 @@ function Footer() {
   return (
     <div className=" bg-[#F7F6F2] ">
       <div className=" flex md:flex-row items-center  flex-col">
-        <div className=" z-0 max-h-96 md:max-h-full ">
+        <div className=" z-0 w-full h-full md:w-[80vh] md:max-h-full ">
           <Image
             src="/icons/phone.png"
-            width={300}
-            height={300}
+            width={50}
+            height={50}
+            layout="responsive"
             // set imagewidth and height acc to screen
             // layout="responsive"
           />
