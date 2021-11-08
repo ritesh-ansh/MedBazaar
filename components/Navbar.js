@@ -4,7 +4,7 @@ import Search from "./Search";
 
 function Navbar() {
   return (
-    <nav className="bg-blue-400 p-2 rounded-b-md hidden">
+    <nav className="bg-blue-400 p-2  ">
       <div className="flex items-center">
         <Image src="/images/logo.png" height={50} width={100} />
         <div className="px-10">
