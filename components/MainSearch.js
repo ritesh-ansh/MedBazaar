@@ -5,7 +5,7 @@ function MainSearch() {
     <>
       <div>
         <div className="block">
-          <img className="h-[100vh] w-full object-cover" src="/images/bg.jpg" />
+          <img className="h-[100vh] w-full" src="/images/bg.jpg" />
         </div>
       </div>
     </>
