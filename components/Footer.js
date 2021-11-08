@@ -8,8 +8,8 @@ function Footer() {
         <div className=" z-0 max-h-96 md:max-h-full ">
           <Image
             src="/icons/phone.png"
-            width={500}
-            height={500}
+            width={300}
+            height={300}
             // set imagewidth and height acc to screen
             // layout="responsive"
           />
@@ -17,8 +17,8 @@ function Footer() {
         <div className=" flex items-center ">
           <div className="flex items-center flex-col  ">
             <div className="">
-              <h3 className=" mr-auto p-2 md:p-4 text-4xl lg:text-5xl font-semibold tracking-wider  leading-11 md:leading-5 ">
-                <span className="  text-[#077861] font-mulish font-  lg:text-5xl text-4xl font-bold ">
+              <h3 className="font-quicksand mr-auto p-2 md:p-4 text-4xl lg:text-5xl font-semibold tracking-wider  leading-11 md:leading-5 ">
+                <span className="  text-[#077861] lg:text-5xl text-4xl font-bold ">
                   Download{" "}
                 </span>
                 the app for{" "}
@@ -46,12 +46,12 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className=" bg- ">
+      <div className=" ">
+        <div className="flex p-4 ">
         <h3 className="p-3 text-xl font-semibold text-gray-700 font-mulish">
           Our Payment Partners
         </h3>
-        <div className="flex  justify-around p-4 ">
-          <div className="flex md:space-x-16 md:flex-row flex-col md:justify-around items-center p-4 ">
+          <div className="flex md:space-x-16 md:flex-row flex-col items-center p-4 ">
             <div>
               <Image src="/icons/gpay.png" width={60} height={30} />
             </div>
@@ -76,7 +76,7 @@ function Footer() {
               <Image src="/icons/upi.png" width={90} height={50} />
             </div>
           </div>
-          <div className=" flex flex-col items-center justify-center mx-5 ml-6">
+          <div className=" flex flex-col items-center justify-start mx-5 ml-6">
             <p className="text-md pd-3 m-3 font-mulish font-semibold">
               Connect with us
             </p>
