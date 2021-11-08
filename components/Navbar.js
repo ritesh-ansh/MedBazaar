@@ -16,13 +16,13 @@ function Navbar() {
     <>
       {/* TODO: MAKE SEARCH BAR FUNCTIONALITY i.e. WHEN BAR GOES IN THE ELEMENTS MOVE SIDE WAYS  */}
       {/* TODO: make navbar responsive in while scrolling  */}
-      <header className=" w-full h-30 p-5 z-10 bg-[#fdd134] fixed ">
+      <header className=" font-quicksand rounded-md w-full h-30 p-5 z-10 bg-[#fdd134] fixed ">
         <nav className="flex items-center justify-between ">
           <div className="flex items-center">
             <Link href="/">
-              <a className="  hover:shadow-inner hover:scale-105 transform transition duration-200 ">
+              <a className="hover:scale-105 transform transition duration-200 ">
                 <img
-                  className=" w-[30vh] transition-all duration-100 md:w-[20vh]"
+                  className="w-[20vh] transition-all duration-100 md:w-[20vh]"
                   src="/images/logo.png"
                 />
               </a>
@@ -50,7 +50,7 @@ function Navbar() {
               </svg>
             </a>
           </Link>
-          <div className="hidden md:flex items-center space-x-16 pr-4 justify-around">
+          <div className=" hidden md:flex items-center space-x-16 pr-4 justify-around">
             <Link href="/">
               <a className="transform transition duration-75 hover:scale-105 ">
                 <Image src="/icons/rx.png" width={40} height={40} />
@@ -87,7 +87,7 @@ function Navbar() {
               <a className="flex items-center">
                 <Image src="/icons/rx.png" width={40} height={40} />
 
-                <label className="px-3 text-white">Prescription</label>
+                <label className="px-3 text-black">Prescription</label>
               </a>
             </Link>
           </li>
@@ -96,7 +96,7 @@ function Navbar() {
               <a className="flex items-center">
                 <Image src="/icons/cart.png" width={40} height={40} />
 
-                <label className="px-3 text-white">Cart</label>
+                <label className="px-3 text-black">Cart</label>
               </a>
             </Link>
           </li>
@@ -105,7 +105,7 @@ function Navbar() {
               <a className="flex items-center">
                 <Image src="/icons/login.png" width={40} height={40} />
 
-                <label className="px-3 text-white">Login</label>
+                <label className="px-3 text-black">Login</label>
               </a>
             </Link>
           </li>
@@ -114,7 +114,7 @@ function Navbar() {
               <a className="flex items-center">
                 <Image src="/icons/signup.png" width={40} height={40} />
 
-                <label className="px-3 text-white">Sign Up</label>
+                <label className="px-3 text-black">Sign Up</label>
               </a>
             </Link>
           </li>
