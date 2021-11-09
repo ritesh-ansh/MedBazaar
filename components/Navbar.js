@@ -1,6 +1,3 @@
-useEffect(() => {
-  window.addEventListener("scroll", checkScrollPosition);
-});
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -11,11 +8,12 @@ function Navbar() {
   const [navbar, setNavbar] = useState(false);
 
   const handleButtonClick = () => {
-    console.log("clicked");
     setIsOpen((isOpen) => !isOpen);
-    console.log(isOpen);
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", checkScrollPosition);
+  });
   const checkScrollPosition = () => {
     if (window.scrollY > 240) setNavbar(true);
     else setNavbar(false);
