@@ -1,10 +1,14 @@
+useEffect(() => {
+  window.addEventListener("scroll", checkScrollPosition);
+});
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Search from "./Search";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [navbar, setNavbar] = useState(false);
 
   const handleButtonClick = () => {
     console.log("clicked");
@@ -12,23 +16,40 @@ function Navbar() {
     console.log(isOpen);
   };
 
+  const checkScrollPosition = () => {
+    if (window.scrollY > 240) setNavbar(true);
+    else setNavbar(false);
+  };
+
   return (
     <>
       {/* TODO: MAKE SEARCH BAR FUNCTIONALITY i.e. WHEN BAR GOES IN THE ELEMENTS MOVE SIDE WAYS  */}
       {/* TODO: make navbar responsive in while scrolling  */}
-      <header className=" font-quicksand rounded-md w-full h-30 p-5 z-10 bg-[#fdd134] fixed ">
-        <nav className="flex items-center justify-between ">
+      <header
+        className={
+          " font-quicksand rounded-md w-full    p-5 z-10 bg-[#fdd134] fixed " +
+          (navbar ? "h-20" : "h-30 ")
+        }
+      >
+        <nav className="flex  items-center transition-all duration-100 justify-between ">
           <div className="flex items-center">
             <Link href="/">
-              <a className="hover:scale-105 transform transition duration-200 ">
+              <a className="hover:scale-105 items-start transform transition duration-200 ">
                 <img
-                  className="w-[20vh] transition-all duration-100 md:w-[20vh]"
+                  className={
+                    " transition-all duration-100 " +
+                    (navbar ? "w-[15vh]" : "w-[20vh]")
+                  }
                   src="/images/logo.png"
                 />
               </a>
             </Link>
             <h4 className="px-10">Dropdown</h4>
           </div>
+          <div className="w-[60vh] ">
+            <Search />
+          </div>
+
           <Link href="">
             <a
               onClick={handleButtonClick}
@@ -36,7 +57,7 @@ function Navbar() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -50,27 +71,80 @@ function Navbar() {
               </svg>
             </a>
           </Link>
-          <div className=" hidden md:flex items-center space-x-16 pr-4 justify-around">
+          <div
+            className={
+              " hidden md:flex items-center transition-all duration-200 pr-4 justify-around" +
+              (navbar ? " space-x-12" : " space-x-16")
+            }
+          >
             <Link href="/">
-              <a className="transform transition duration-75 hover:scale-105 ">
-                <Image src="/icons/rx.png" width={40} height={40} />
+              <a
+                className={
+                  "transform transition duration-75 hover:scale-105 " +
+                  (navbar ? "h-8 w-8" : "h-10 w-10 ")
+                }
+              >
+                <Image
+                  src="/icons/rx.png"
+                  width={40}
+                  height={40}
+                  layout="responsive"
+                />
               </a>
             </Link>
             <Link href="/">
-              <a className="transform transition duration-75 hover:scale-105 ">
-                <Image src="/icons/cart.png" width={40} height={35} />
+              <a
+                className={
+                  "transform transition duration-75 hover:scale-105 " +
+                  (navbar ? "h-8 w-8" : "h-10 w-10 ")
+                }
+              >
+                <Image
+                  src="/icons/cart.png"
+                  width={40}
+                  height={35}
+                  layout="responsive"
+                />
               </a>
             </Link>
             <Link href="/">
-              <a className="  flex items-center justify-center border-2 hover:outline-none hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 border-black px-2 py-1 rounded-md transform transition duration-75 hover:scale-105 ">
-                <Image src="/icons/login.png" width={30} height={30} />
-                <button className="p-2">Login</button>
+              <a>
+                <button
+                  className={
+                    "  flex items-center justify-center border-2 hover:outline-none hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 border-black  rounded-md transform transition duration-75 hover:scale-105 " +
+                    (navbar ? "px-1 " : "px-2 py-1")
+                  }
+                >
+                  <div className={navbar ? "h-7 w-7" : "h-9 w-9 "}>
+                    <Image
+                      src="/icons/login.png"
+                      width={30}
+                      height={30}
+                      layout="responsive"
+                    />
+                  </div>
+                  <span className="p-2  leading-tight">Login</span>
+                </button>
               </a>
             </Link>
             <Link href="/">
-              <a className="  flex items-center justify-center border-2 hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 hover:outline-none border-black px-2 py-1 rounded-md transform transition duration-75 hover:scale-105 ">
-                <Image src="/icons/signup.png" width={30} height={30} />
-                <button className="p-2">Sign Up</button>
+              <a>
+                <button
+                  className={
+                    "  flex items-center justify-center border-2 hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 hover:outline-none border-black  rounded-md transform transition duration-75 hover:scale-105 " +
+                    (navbar ? "px-1 " : "px-2 py-1")
+                  }
+                >
+                  <div className={navbar ? "h-6 w-6 " : "h-8 w-8 "}>
+                    <Image
+                      src="/icons/signup.png"
+                      width={30}
+                      height={30}
+                      layout="responsive"
+                    />
+                  </div>
+                  <span className="p-2 leading-tight ">Sign Up</span>
+                </button>
               </a>
             </Link>
           </div>
