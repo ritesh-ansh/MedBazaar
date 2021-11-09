@@ -36,19 +36,28 @@ function Navbar() {
                 <img
                   className={
                     " transition-all duration-100 " +
-                    (navbar ? "w-[15vh]" : "w-[20vh]")
+                    (navbar ? "w-[18vh]" : "w-[20vh]")
                   }
                   src="/images/logo.png"
                 />
               </a>
             </Link>
-            <h4 className="px-10">Dropdown</h4>
+            <h4 className="px-14">Dropdown</h4>
           </div>
-          <div className="w-[60vh] ">
+          {/* <div
+            className={
+              "w-[60vh] transition duration-150 " +
+              (navbar
+                ? "translate-y-0 visible"
+                : "translate-y-full hidden" + isOpen
+                ? "hidden"
+                : "visible")
+            }
+          >
             <Search />
-          </div>
+          </div> */}
 
-          <Link href="">
+          <Link href="#">
             <a
               onClick={handleButtonClick}
               className=" p-2 border-black rounded border-2 md:hidden"
@@ -72,14 +81,14 @@ function Navbar() {
           <div
             className={
               " hidden md:flex items-center transition-all duration-200 pr-4 justify-around" +
-              (navbar ? " space-x-12" : " space-x-16")
+              " space-x-16"
             }
           >
             <Link href="/">
               <a
                 className={
                   "transform transition duration-75 hover:scale-105 " +
-                  (navbar ? "h-8 w-8" : "h-10 w-10 ")
+                  (navbar ? "h-9 w-9" : "h-10 w-10 ")
                 }
               >
                 <Image
@@ -94,7 +103,7 @@ function Navbar() {
               <a
                 className={
                   "transform transition duration-75 hover:scale-105 " +
-                  (navbar ? "h-8 w-8" : "h-10 w-10 ")
+                  (navbar ? "h-9 w-9" : "h-10 w-10 ")
                 }
               >
                 <Image
@@ -110,7 +119,7 @@ function Navbar() {
                 <button
                   className={
                     "  flex items-center justify-center border-2 hover:outline-none hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 border-black  rounded-md transform transition duration-75 hover:scale-105 " +
-                    (navbar ? "px-1 " : "px-2 py-1")
+                    (navbar ? "px-1 py-1 " : "px-2 py-1")
                   }
                 >
                   <div className={navbar ? "h-7 w-7" : "h-9 w-9 "}>
@@ -130,7 +139,7 @@ function Navbar() {
                 <button
                   className={
                     "  flex items-center justify-center border-2 hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 hover:outline-none border-black  rounded-md transform transition duration-75 hover:scale-105 " +
-                    (navbar ? "px-1 " : "px-2 py-1")
+                    (navbar ? "px-2 " : "px-2 py-1")
                   }
                 >
                   <div className={navbar ? "h-6 w-6 " : "h-8 w-8 "}>
