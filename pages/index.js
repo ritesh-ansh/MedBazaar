@@ -1,5 +1,5 @@
 import Head from "next/head";
-import MainSearch from "../components/MainSearch";
+import App from "../components/App";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <MainSearch />
+      <App />
     </>
   );
 }

@@ -9,4 +9,7 @@
   html {
     scroll-behaviour: smooth;
   }
+  body {
+    font-family: "Roboto" "sans-serif";
+  }
 }
