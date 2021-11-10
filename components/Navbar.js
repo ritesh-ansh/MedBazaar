@@ -33,13 +33,19 @@ function Navbar() {
           <div className="flex items-center">
             <Link href="/">
               <a className="hover:scale-105 items-start transform transition duration-200 ">
-                <img
+                <div
                   className={
                     " transition-all duration-100 " +
-                    (navbar ? "w-[18vh]" : "w-[20vh]")
+                    (navbar ? "w-[14vh]" : "w-[18vh] ")
                   }
-                  src="/images/logo.png"
-                />
+                >
+                  <Image
+                    src="/images/logo.png"
+                    width={35}
+                    height={20}
+                    layout="responsive"
+                  />
+                </div>
               </a>
             </Link>
             <h4 className="px-14">Dropdown</h4>
@@ -102,7 +108,7 @@ function Navbar() {
             <Link href="/">
               <a
                 className={
-                  "transform transition duration-75 hover:scale-105 " +
+                  "transform transition-all duration-100 hover:scale-105 " +
                   (navbar ? "h-9 w-9" : "h-10 w-10 ")
                 }
               >
@@ -118,8 +124,8 @@ function Navbar() {
               <a>
                 <button
                   className={
-                    "  flex items-center justify-center border-2 hover:outline-none hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 border-black  rounded-md transform transition duration-75 hover:scale-105 " +
-                    (navbar ? "px-1 py-1 " : "px-2 py-1")
+                    "  flex items-center justify-center border-2 hover:outline-none hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 border-black  rounded-md transform transition-all duration-100 hover:scale-105 " +
+                    (navbar ? "px-1 " : "px-2 py-1")
                   }
                 >
                   <div className={navbar ? "h-7 w-7" : "h-9 w-9 "}>
@@ -138,7 +144,7 @@ function Navbar() {
               <a>
                 <button
                   className={
-                    "  flex items-center justify-center border-2 hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 hover:outline-none border-black  rounded-md transform transition duration-75 hover:scale-105 " +
+                    "  flex items-center justify-center border-2 hover:bg-white hover:ring-1 hover:border-transparent ring-gray-900 hover:outline-none border-black  rounded-md transform transition-all duration-100 hover:scale-105 " +
                     (navbar ? "px-2 " : "px-2 py-1")
                   }
                 >
@@ -159,7 +165,7 @@ function Navbar() {
         {/* TODO: use useState to get he slide in and onnclick behaviour on the buttin and the ul */}
         <ul
           className={
-            " w-full space-y-3 px-6 py-2 fixed transition transform duration-150  left-0 right-0  md:hidden h-screen bg-[#fdd134] " +
+            " w-full space-y-3 px-6 py-2 fixed transition-all transform duration-150  left-0 right-0  md:hidden h-screen bg-[#fdd134] " +
             (isOpen ? "translate-x-0" : "translate-x-full")
           }
         >

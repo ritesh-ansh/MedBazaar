@@ -6,7 +6,7 @@ function Order() {
     <>
       <div className="flex  flex-col m-4 justify-center items-center">
         <div>
-          <h4 className=" text-4xl md:ext-5xl md:p-5 md:pt-9 font-bold text-[#077861] ">
+          <h4 className=" text-4xl md:ext-5xl md:p-5 md:pt-9 font-bold text-[#077861] font-mulish ">
             Order Medicines Here
           </h4>
         </div>
@@ -16,7 +16,7 @@ function Order() {
               {/* #TODO: make a presciption page */}
               <Link href="">
                 <a className="flex space-x-3 md:px-1 items-center  ">
-                  <span className=" text-lg  text-center md:text-2xl  text-white font-quicksand ">
+                  <span className=" text-lg  text-center md:text-2xl  text-white font-mulish ">
                     Order via Prescription
                   </span>
                   <div className=" pt-1 md:pt-0 w-[7vh] h-[7vh] md:h-10 md:w-10 ">
@@ -35,7 +35,7 @@ function Order() {
               {/* #TODO: make a presciption page */}
               <Link href="">
                 <a className="flex space-x-4 md:px-1 items-center  ">
-                  <span className=" md:text-2xl text-center text-lg text-white font-quicksand ">
+                  <span className=" md:text-2xl text-center text-lg text-white font-mulish ">
                     Don't have a Presciption?
                   </span>
                   <div className=" pt-2 md:pt-0 w-[7vh] h-[7vh] md:h-10 md:w-10">
