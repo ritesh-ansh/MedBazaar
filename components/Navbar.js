@@ -36,7 +36,7 @@ function Navbar() {
                 <div
                   className={
                     " transition-all duration-100 " +
-                    (navbar ? "w-[14vh]" : "w-[18vh] ")
+                    (navbar ? "w-[10vh] " : "w-[18vh] ")
                   }
                 >
                   <Image
