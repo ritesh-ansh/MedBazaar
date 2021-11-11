@@ -1,0 +1,7 @@
+/* // import Swiper styles */
+@import "swiper/css";
+
+.swiper {
+  width: auto;
+  height: 30vh;
+}

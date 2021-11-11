@@ -18,7 +18,7 @@ function MainSearch() {
   return (
     <>
       <div
-        className="w-full flex justify-center items-center h-screen bg-back-ground opacity-80  bg-no-repeat bg-cover  "
+        className="w-full h-[95vh] flex justify-center items-center md:h-screen bg-back-ground opacity-80  bg-no-repeat bg-cover  "
         // styles="background-image:url('/images/bg.jpg')"
       >
         <div
