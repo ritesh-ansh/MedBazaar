@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Search from "./Search";
+import Dropdown from "./Dropdown";
+import "react-dropdown/style.css";
+
+const options = ["one", "two", "three"];
+const defaultOption = options[0];
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +53,10 @@ function Navbar() {
                 </div>
               </a>
             </Link>
-            <h4 className="px-14">Dropdown</h4>
+            {/* Dropdown */}
+            <div className="ml-[10vh]">
+              <Dropdown />
+            </div>
           </div>
           {/* <div
             className={
