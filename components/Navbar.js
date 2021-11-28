@@ -36,7 +36,7 @@ function Navbar() {
             ? "bg-beauty"
             : page === "Health-tips" && navbar
             ? "bg-health-tips"
-            : page === undefined
+            : page === "undefined"
             ? "bg-[#fdd334]"
             : "bg-transparent")
         }
