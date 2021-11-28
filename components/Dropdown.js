@@ -13,9 +13,9 @@ function Dropdown() {
 
   return (
     <>
-      <div className="bg-white rounded-lg overflow-hidden py-2   ">
+      <div className="bg-white w-full h-full  rounded-lg overflow-hidden py-2   ">
         <button
-          className="w-full flex items-center justify-around bg-gray-50"
+          className="flex w-full h-full  items-center justify-around bg-gray-50"
           onKeyPress={toggle}
           onClick={toggle}
         >
