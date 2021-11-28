@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Search from "./Search";
 import Dropdown from "./Dropdown";
-import "react-dropdown/style.css";
 
 const options = ["one", "two", "three"];
 const defaultOption = options[0];
