@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-function Order() {
+function Order({ page }) {
   return (
     <>
       <div className="flex  flex-col m-4 justify-center items-center">

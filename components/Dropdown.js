@@ -1,9 +1,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import onClickOutside from "react-onclickoutside";
+import { useRouter } from "next/router";
 
 function Dropdown() {
-  const [header, setHeader] = useState("Medicine");
+  const router = useRouter();
+  const { page } = router.query;
+
+  const [header, setHeader] = useState(page ? page : "Medicine");
   const [open, setOpen] = useState(false);
   Dropdown.handleClickOutside = () => setOpen(false);
 
@@ -70,7 +74,7 @@ function Dropdown() {
               </Link>
             </li>
             <li>
-              <Link href="/beauty">
+              <Link href="/Beauty">
                 <a
                   className={header === "Beauty" ? "hidden" : "visible"}
                   onClick={handleOnClick}
@@ -80,7 +84,7 @@ function Dropdown() {
               </Link>
             </li>
             <li>
-              <Link href="/health-tips">
+              <Link href="/Health-tips">
                 <a
                   className={header === "Health Tips" ? "hidden" : "visible"}
                   onClick={handleOnClick}

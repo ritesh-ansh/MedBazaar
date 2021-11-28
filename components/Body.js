@@ -1,10 +1,10 @@
 import Order from "./Body/Order";
 // import Slider from "./Body/Slider";
 
-function Body() {
+function Body({ page }) {
   return (
     <div>
-      <Order />
+      <Order page={page} />
       {/* <Slider /> */}
     </div>
   );

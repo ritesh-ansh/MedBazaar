@@ -1,11 +1,14 @@
+import { useRouter } from "next/router";
 import Head from "next/head";
 import App from "../components/App";
 
-export default function Home() {
+function Page() {
+  const router = useRouter();
+  const { page } = router.query;
   return (
     <>
       <Head>
-        <title>MedBazar | Medicines</title>
+        <title>MedBazar | {page}</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300&family=Roboto:wght@100;300&display=swap"
           rel="stylesheet"
@@ -15,3 +18,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Page;

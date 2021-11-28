@@ -3,11 +3,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Search from "./Search";
 import Dropdown from "./Dropdown";
-
-const options = ["one", "two", "three"];
-const defaultOption = options[0];
+import { useRouter } from "next/router";
 
 function Navbar() {
+  const router = useRouter();
+  const { page } = router.query;
+
   const [isOpen, setIsOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
 
@@ -29,8 +30,13 @@ function Navbar() {
       {/* TODO: make navbar responsive in while scrolling  */}
       <header
         className={
-          " font-quicksand rounded-md w-full    p-5 z-10 bg-[#fdd134] fixed " +
-          (navbar ? "h-20" : "h-30 ")
+          " font-quicksand rounded-md w-full    p-5 z-10 fixed " +
+          (navbar ? "h-20 " : "h-30 bg-transparent ") +
+          (page === "Beauty" && navbar
+            ? "bg-beauty"
+            : page === "Health-tips" && navbar
+            ? "bg-health-tips"
+            : "bg-transparent")
         }
       >
         <nav className="flex  items-center transition-all duration-100 justify-between ">
