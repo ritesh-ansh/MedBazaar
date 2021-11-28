@@ -3,6 +3,7 @@ import Link from "next/link";
 
 function Dropdown() {
   const [header, setHeader] = useState("Medicine");
+
   const [open, setOpen] = useState(false);
 
   const toggle = () => setOpen(!open);
