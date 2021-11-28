@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 function Navbar() {
   const router = useRouter();
   const { page } = router.query;
+  console.log(page);
 
   const [isOpen, setIsOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
@@ -36,7 +37,7 @@ function Navbar() {
             ? "bg-beauty"
             : page === "Health-tips" && navbar
             ? "bg-health-tips"
-            : page === "undefined"
+            : page === undefined
             ? "bg-[#fdd334]"
             : "bg-transparent")
         }
