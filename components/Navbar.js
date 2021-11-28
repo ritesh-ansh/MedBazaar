@@ -55,8 +55,10 @@ function Navbar() {
             {/* Dropdown */}
             <div
               className={
-                " w-[14vh] h-[5vh] md:w-[15vh]  " +
-                (navbar ? " ml-[5vh] w-[12vh] h-[4vh] " : "ml-[4vh] md:[10vh] ")
+                "     " +
+                (navbar
+                  ? " ml-[5vh] w-[12vh] h-[4vh] md:w-[18vh] "
+                  : "ml-[4vh] w-[14vh] h-[5vh]   md:w-[20vh] ")
               }
             >
               <Dropdown />
