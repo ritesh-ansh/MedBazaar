@@ -15,7 +15,7 @@ function Dropdown() {
     <>
       <div className="bg-white rounded-lg overflow-hidden py-2   ">
         <button
-          className="w-[20vh] flex items-center justify-around bg-gray-50"
+          className="w-full flex items-center justify-around bg-gray-50"
           onKeyPress={toggle}
           onClick={toggle}
         >
@@ -36,7 +36,7 @@ function Dropdown() {
           </svg>
         </button>
         {open && (
-          <ul className="absolute p-2 bg-gray-50 w-[20vh] rounded-b-lg space-y-2  ">
+          <ul className="absolute p-2 bg-gray-50 w-[10vh] md:w-[20vh] rounded-b-lg space-y-2  ">
             <li>
               <Link href="/">
                 <a
