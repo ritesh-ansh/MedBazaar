@@ -185,8 +185,13 @@ function Navbar() {
         {/* TODO: use useState to get he slide in and onnclick behaviour on the buttin and the ul */}
         <ul
           className={
-            " w-full space-y-3 px-6 py-2 fixed transition-all transform duration-150  left-0 right-0  md:hidden h-screen bg-[#fdd134] " +
-            (isOpen ? "translate-x-0" : "translate-x-full")
+            " w-full space-y-3 px-6 py-2 fixed transition-all transform duration-150  left-0 right-0  md:hidden h-screen  " +
+            (isOpen ? " translate-x-0 " : " translate-x-full ") +
+            (page === "Beauty"
+              ? "bg-[#cfc9cd]"
+              : page === "Health-tips"
+              ? "bg-[#939393]"
+              : "bg-[#fdd134]")
           }
         >
           <li>
