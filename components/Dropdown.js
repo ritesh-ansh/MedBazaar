@@ -36,7 +36,7 @@ function Dropdown() {
           </svg>
         </button>
         {open && (
-          <ul className="absolute p-2 bg-gray-50 w-[10vh] md:w-[20vh] rounded-b-lg space-y-2  ">
+          <ul className="absolute p-2 bg-gray-50 w-[14vh] md:w-[20vh] rounded-b-lg space-y-2  ">
             <li>
               <Link href="/">
                 <a
