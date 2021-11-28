@@ -80,7 +80,7 @@ function Navbar() {
           <Link href="#">
             <a
               onClick={handleButtonClick}
-              className="rounded overflow-hidden md:hidden"
+              className="rounded active:opacity-50   overflow-hidden md:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
