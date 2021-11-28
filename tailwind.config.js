@@ -18,7 +18,9 @@ module.exports = {
   },
 
   variants: {
-    extend: {},
+    extend: {
+      border: ["active"],
+    },
   },
   plugins: [],
 };
