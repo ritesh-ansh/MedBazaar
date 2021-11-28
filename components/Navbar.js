@@ -80,11 +80,11 @@ function Navbar() {
           <Link href="#">
             <a
               onClick={handleButtonClick}
-              className=" p-2 border-gray-300 active:border-white bg-gray-300 rounded border-2 md:hidden"
+              className="rounded overflow-hidden md:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-white  "
+                className="h-8 w-8 text-white  "
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
