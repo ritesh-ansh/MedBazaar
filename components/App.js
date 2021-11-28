@@ -11,3 +11,5 @@ function App() {
 }
 
 export default App;
+
+// TODO: Implement Dynamic page rendering and use it to display the pages
