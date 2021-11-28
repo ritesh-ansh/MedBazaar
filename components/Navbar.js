@@ -57,7 +57,7 @@ function Navbar() {
               className={
                 "     " +
                 (navbar
-                  ? " ml-[5vh] w-[12vh] h-[4vh] md:w-[18vh] "
+                  ? " ml-[5vh] w-[12vh] h-[4vh]  md:w-[20vh] "
                   : "ml-[4vh] w-[14vh] h-[5vh]   md:w-[20vh] ")
               }
             >

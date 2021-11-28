@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Link from "next/link";
+import onClickOutside from "react-onclickoutside";
 
 function Dropdown() {
   const [header, setHeader] = useState("Medicine");
   const [open, setOpen] = useState(false);
+  Dropdown.handleClickOutside = () => setOpen(false);
 
   const toggle = () => setOpen(!open);
   const handleOnClick = (event) => {
@@ -13,7 +15,10 @@ function Dropdown() {
 
   return (
     <>
-      <div className="bg-white w-full h-full  rounded-lg overflow-hidden py-2   ">
+      <div
+        role="button"
+        className="bg-white w-full h-full  rounded-lg overflow-hidden py-2   "
+      >
         <button
           className="flex w-full h-full  items-center justify-around bg-gray-50"
           onKeyPress={toggle}
@@ -22,7 +27,7 @@ function Dropdown() {
           {header}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className=" w-5 h-5 md:h-6 md:w-6"
+            className=" w-4 h-4 "
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -73,4 +78,8 @@ function Dropdown() {
     </>
   );
 }
-export default Dropdown;
+const clickOutsideConfig = {
+  handleClickOutside: () => Dropdown.handleClickOutside,
+};
+
+export default onClickOutside(Dropdown, clickOutsideConfig);
