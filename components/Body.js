@@ -1,9 +1,10 @@
+import Flatlist from "./Body/Flatlist";
 import Order from "./Body/Order";
-// import Slider from "./Body/Slider";
 
 function Body({ page }) {
   return (
     <div>
+      <Flatlist />
       <Order page={page} />
       {/* <Slider /> */}
     </div>

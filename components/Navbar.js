@@ -26,8 +26,6 @@ function Navbar() {
 
   return (
     <>
-      {/* TODO: MAKE SEARCH BAR FUNCTIONALITY i.e. WHEN BAR GOES IN THE ELEMENTS MOVE SIDE WAYS  */}
-      {/* TODO: make navbar responsive in while scrolling  */}
       <header
         className={
           " font-quicksand rounded-md w-full    p-5 z-10 fixed " +

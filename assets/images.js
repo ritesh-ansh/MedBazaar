@@ -1,4 +1,4 @@
-export default images = [
+export const images = [
   {
     id: 1,
     source: "https://source.unsplash.com/random/200x300",

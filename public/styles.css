@@ -13,3 +13,6 @@
     font-family: "Mulish" "sans-serif";
   }
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
