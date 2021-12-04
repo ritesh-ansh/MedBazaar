@@ -34,9 +34,9 @@ function Flatlist() {
       </div>
 
       <div
+        style={{ scrollBehavior: "smooth" }}
         id="flatlist"
-        className="flex w-full transition-all
-        translate duration-200 scrollbar-hide space-x-3 flex-row overflow-x-auto mt-1  p-1 "
+        className="flex w-full scrollbar-hide space-x-3 flex-row overflow-x-auto mt-1  p-1 "
       >
         <div className="shadow-md   ">
           <FlatlistImage />
