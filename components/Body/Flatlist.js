@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { useEffect } from "react";
 
-function Flatlist() {
+function Flatlist({ images }) {
   //   img.forEach((image) => {
   //     console.log(image);
   //   });
+
   const handleClickLeft = () => {
     document.getElementById("flatlist").scrollLeft -= 350;
   };
@@ -38,27 +40,12 @@ function Flatlist() {
         id="flatlist"
         className="flex w-full scrollbar-hide space-x-3 flex-row overflow-x-auto mt-1  p-1 "
       >
-        <div className="shadow-md   ">
-          <FlatlistImage />
-        </div>
-        <div>
-          <FlatlistImage />
-        </div>
-        <div>
-          <FlatlistImage />
-        </div>
-        <div>
-          <FlatlistImage />
-        </div>
-        <div>
-          <FlatlistImage />
-        </div>
-        <div>
-          <FlatlistImage />
-        </div>
-        <div>
-          <FlatlistImage />
-        </div>
+        {images.map((image) => {
+          <div className="shadow-md   ">
+            {/* <FlatlistImage src={image} /> */}
+            {console.log(image)}
+          </div>;
+        })}
       </div>
       <div
         role="button"
@@ -86,15 +73,10 @@ function Flatlist() {
 
 export default Flatlist;
 
-export function FlatlistImage() {
+export function FlatlistImage({ src }) {
   return (
     <div className="w-[350px] rounded overflow-hidden h-[180px] ">
-      <Image
-        src="https://picsum.photos/400/195"
-        width={350}
-        height={180}
-        layout="responsive"
-      />
+      <Image src={src} width={350} height={180} layout="responsive" />
     </div>
   );
 }
